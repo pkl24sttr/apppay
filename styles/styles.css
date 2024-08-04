@@ -1321,6 +1321,8 @@ textarea.form-textarea[rows] {
   background-color: #ffffff;
   border-radius: 15px;
   box-shadow: 0px 8px 15px 0px rgba(24, 25, 27, 0.05);
+  width: 100%; /* Adjust the width as needed */
+  height: 200px; /* Adjust the height as needed */
 }
 .tf-balance-box .balance {
   padding: 0px 16px 8px;
@@ -2568,8 +2570,6 @@ textarea.form-textarea[rows] {
   background-size: cover;
   background-position: center center;
   position: relative;
-  border-bottom-right-radius: 80px;
-  border-bottom-left-radius: 80px;
 }
 .app-header .tf-topbar {
   padding: 0px 16px;
