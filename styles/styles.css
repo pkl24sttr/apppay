@@ -3170,7 +3170,7 @@ textarea.form-textarea[rows] {
 }
 .content-card .tf-btn {
   text-transform: none;
-  border: 2px dashed #c5c5c5;
+  /* border: 2px dashed #c5c5c5; */
 }
 
 .group-double-ip {
