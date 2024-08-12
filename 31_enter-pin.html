@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover">
-    <title>Enter PIN</title>
+    <title>Masukkan PIN</title>
     <!-- Favicon and Touch Icons  -->
     <link rel="shortcut icon" href="images/logo.png" />
     <link rel="apple-touch-icon-precomposed" href="images/logo.png" />
@@ -15,57 +15,83 @@
     <!-- Icons -->
     <link rel="stylesheet" href="fonts/icons-alipay.css">
     <link rel="stylesheet" href="styles/bootstrap.css">
-
     <link rel="stylesheet" type="text/css" href="styles/styles.css" />
     <link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
     <link rel="apple-touch-icon" sizes="192x192" href="app/icons/icon-192x192.png">
 </head>
 
 <body>
-       <!-- preloade -->
-       <div class="preload preload-container">
+    <!-- preloade -->
+    <div class="preload preload-container">
         <div class="preload-logo">
-          <div class="spinner"></div>
+            <div class="spinner"></div>
         </div>
-      </div>
+    </div>
     <!-- /preload -->
     <div class="header">
         <div class="tf-container">
             <div class="tf-statusbar d-flex justify-content-center align-items-center">
                 <a href="#" class="back-btn"> <i class="icon-left"></i> </a>
-                <h3>Enter your PIN</h3>
+                <h3>Masukkan PIN Anda</h3>
             </div>
             <div class="tf-spacing-20"></div>
         </div>
     </div>
     
-    <div class="wrap-transfer">
-            <form class="tf-form-verify" action="32_successful.html">
-                    <div class="d-flex group-input-verify">
-                        <input type="tel" maxlength="1" pattern="[0-9]" class="input-verify" value="3">
-                        <input type="tel" maxlength="1" pattern="[0-9]" class="input-verify" value="6">
-                        <input type="tel" maxlength="1" pattern="[0-9]" class="input-verify" value="2">
-                        <input type="tel" maxlength="1" pattern="[0-9]" class="input-verify" value="">
-                    </div>
-                    <div class="text-send-code">
-                        <p class="fw_4">Enter  your PIN to proceed</p>
-                    </div>
-                <div class="bottom-navigation-bar">
-                    <div class="tf-container">
-                        <button type="button" class="tf-btn accent"><a href="tagihan-success.html" style="color: white;">Continue</a></button>
-                    </div>
+    <div class="wrap-transfer" style="display: none;">
+        <form class="tf-form-verify" id="pin-form">
+            <div class="d-flex group-input-verify">
+                <input type="tel" maxlength="1" pattern="[0-9]" class="input-verify" value="3" id="pin1">
+                <input type="tel" maxlength="1" pattern="[0-9]" class="input-verify" value="6" id="pin2">
+                <input type="tel" maxlength="1" pattern="[0-9]" class="input-verify" value="2" id="pin3">
+                <input type="tel" maxlength="1" pattern="[0-9]" class="input-verify" value="" id="pin4">
+            </div>
+            <div class="text-send-code">
+                <p class="fw_4">Masukkan PIN Anda untuk melanjutkan</p>
+            </div>
+            <div class="bottom-navigation-bar">
+                <div class="tf-container">
+                    <button type="submit" class="tf-btn accent">Selanjutnya</button>
                 </div>
-            </form>
-
+            </div>
+        </form>
     </div>
-
 
     <script type="text/javascript" src="javascript/jquery.min.js"></script>
     <script type="text/javascript" src="javascript/bootstrap.min.js"></script>
-    <script type="text/javascript" src="javascript/count-down.js"></script>
-    <script type="text/javascript" src="javascript/verify-input.js"></script>
-    <script type="text/javascript" src="javascript/main.js"></script>
+    <script type="text/javascript">
+        // Fungsi untuk menampilkan konten utama setelah preload selesai
+        window.onload = function() {
+            // Sembunyikan preload dan tampilkan konten utama
+            document.querySelector('.preload-container').style.display = 'none';
+            document.querySelector('.wrap-transfer').style.display = 'block';
+        };
 
+        document.getElementById("pin-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Mencegah formulir dari pengiriman standar
+
+            // Mengambil nilai PIN yang dimasukkan
+            const pin1 = document.getElementById("pin1").value;
+            const pin2 = document.getElementById("pin2").value;
+            const pin3 = document.getElementById("pin3").value;
+            const pin4 = document.getElementById("pin4").value;
+
+            // Menggabungkan semua input PIN
+            const pin = pin1 + pin2 + pin3 + pin4;
+
+            // PIN yang benar, Anda bisa menggantinya sesuai dengan PIN yang Anda inginkan
+            const correctPin = "3624";
+
+            // Periksa apakah PIN sesuai
+            if (pin === correctPin) {
+                // Arahkan ke halaman sukses
+                window.location.href = "topup-berhasil.html";
+            } else {
+                // Arahkan ke halaman gagal
+                window.location.href = "topup-gagal.html";
+            }
+        });
+    </script>
 </body>
 
 </html>

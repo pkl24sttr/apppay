@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover">
+    <title>Transaksi Berhasil</title>
+    <link rel="shortcut icon" href="images/logo.png" />
+    <link rel="stylesheet" href="fonts/fonts.css" />
+    <link rel="stylesheet" href="fonts/icons-alipay.css">
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        @keyframes success-animation {
+            0% { opacity: 0; transform: scale(0.5); }
+            50% { opacity: 1; transform: scale(1.1); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        .receipt {
+            font-size: 20px;
+        }
+
+        .receipt p {
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+        }
+
+        .icon-btn {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            margin-right: 15px;
+        }
+
+        .icon-btn i {
+            margin-left: 5px;
+        }
+
+        .icon-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .action-btn {
+            background-color: #533dea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-right: 10px;
+            font-size: 18px;
+            border-radius: 30px; /* Membuat tombol berbentuk oval */
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .action-btn:hover {
+            background-color: #432ba8;
+        }
+
+        .action-btn i {
+            margin-left: 10px;
+        }
+
+        .wrap-receipt {
+            margin: 20px;
+        }
+
+        .bottom-navigation-bar {
+            display: none;
+        }
+
+        .tf-statusbar {
+            animation: success-animation 0.6s ease-out;
+            text-align: center;
+        }
+
+        .tf-statusbar i {
+            font-size: 50px;
+            color: #28a745; /* Warna hijau untuk menggambarkan keberhasilan */
+            margin-bottom: 10px;
+            animation: success-animation 0.6s ease-out;
+        }
+
+        .tf-btn.accent {
+            border-radius: 30px; /* Membuat tombol Kembali ke Beranda berbentuk oval */
+            background-color: #533dea;
+            color: white;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+
+        .tf-btn.accent:hover {
+            background-color: #432ba8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="tf-container">
+            <div class="tf-spacing-20"></div>
+        </div>
+    </div>
+
+    <div class="wrap-receipt">
+        <div class="card">
+            <div class="card-header">
+                <div class="tf-statusbar d-flex justify-content-center align-items-center flex-column">
+                    <i class="fas fa-check-circle"></i> <!-- Ikon check hijau --><h1>Transaksi Berhasil</h1>
+                </div>
+                <h2>Struk Pembayaran</h2>
+            </div>
+            <div class="card-body">
+                <div class="receipt">
+                    <p class="mb-3"><span>ID Transaksi:</span> <span>123456789</span></p>
+                    <p class="mb-3"><span>Waktu:</span> <span>07/08/2024, 12:34 PM</span></p>
+                    <p class="mb-3"><span>Jumlah:</span> <span>Rp. 200.000</span></p>
+                    <p class="mb-3"><span>Status:</span> <span style="color: green;">Sukses</span></p>
+                </div>
+            </div>
+            <div class="card-footer text-center">
+                <div class="icon-container">
+                    <button type="button" class="action-btn d-flex justify-content-center align-items-center" onclick="shareReceipt()">
+                        <span>Bagikan</span>
+                        <i class="fas fa-share ms-2"></i>
+                    </button>
+                    <button type="button" class="action-btn d-flex justify-content-center align-items-center" onclick="downloadReceipt()">
+                        <span>Download</span>
+                        <i class="fa-solid fa-download ms-2"></i>
+                    </button>
+                </div>                
+                <div class="tf-spacing-20"></div>
+                <button type="button" class="tf-btn accent" onclick="window.location.href='home.html'">Kembali ke Beranda</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="javascript/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -19,6 +19,7 @@
     <link rel="stylesheet" type="text/css" href="styles/styles.css" />
     <link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
     <link rel="apple-touch-icon" sizes="192x192" href="app/icons/icon-192x192.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body class="bg_surface_color">
@@ -33,207 +34,141 @@
         <div class="tf-container">
             <div class="tf-statusbar d-flex justify-content-center align-items-center">
                 <a href="#" class="back-btn"> <i class="icon-left"></i> </a>
-                <h3>History</h3>
+                <h3>Mutasi</h3>
                 <a href="#" id="btn-popup-up" class="action-right"><i class="icon icon-filter"></i> </a>
             </div>
         </div>
     </div>
     <div id="app-wrap">
-            <div class="app-section st1 mt-1 bg_white_color">
-                <div class="tf-container">
-                    <div class="wrap-total">
-                        <div class="total-item">
-                            <a href="#" class="box-icon bg_primary"><i class="icon-arrow-up_minor primary_color"></i></a>
-                                <div class="content">
-                                    <p class="fw_4">Income</p>
-                                    <h2 class="fw_6 success_color">$778.35</h2>
+        <div class="app-section st1 mt-1 mb-5 bg_white_color">
+            <div class="tf-container">
+                <div class="trading-month">
+                    <h4 class="fw_5 mb-3">November</h4>
+                    <div class="group-trading-history mb-5">
+                        <a class="tf-trading-history" href="61_filter-research.html">
+                            <div class="inner-left">
+                                <div class="icon-box rgba_primary">
+                                    <i class="fa-solid fa-money-bill"></i>
                                 </div>
-                        </div>
-                        <div class="total-item">
-                            <a href="#" class="box-icon bg_critical"><i class="icon-arrow-up_minor critical_color arrow-down"></i></a>
-            
-            
-                            <div class="content">
-                                <p class="fw_4">Outcome</p>
-                                <h2 class="fw_6 critical_color">$878.35</h2>
+                                <div class="content">
+                                    <h4>Bayar SPP</h4>
+                                    <p>Today 10:27 AM</p>
+                                </div>
                             </div>
-                        </div>
+                            <span class="num-val critical_color">- Rp. 300.000</span>
+                        </a>
+                        <a class="tf-trading-history" href="61_filter-research.html">
+                            <div class="inner-left">
+                                <div class="icon-box rgba_success">
+                                    <i class="fa-solid fa-wallet"></i>
+                                </div>
+                                <div class="content">
+                                    <h4>Top Up App Pay</h4>
+                                    <p>Today 7:30 AM</p>
+                                </div>
+                            </div>
+                            <span class="num-val success_color">+ Rp. 500.000</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="trading-month">
+                    <h4 class="fw_5 mb-3">October</h4>
+                    <div class="group-trading-history mb-5">
+                        <a class="tf-trading-history" href="61_filter-research.html">
+                            <div class="inner-left">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-money-bill"></i>
+                                </div>
+                                <div class="content">
+                                    <h4>Bayar SPP</h4>
+                                    <p>12/10/2024 17:27 PM</p>
+                                </div>
+                            </div>
+                            <span class="num-val critical_color">- Rp. 300.000</span>
+                        </a>
+                        <a class="tf-trading-history" href="61_filter-research.html">
+                            <div class="inner-left">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-coins"></i>
+                                </div>
+                                <div class="content">
+                                    <h4>Uang Kas</h4>
+                                    <p>06/10/2024 13:27 PM</p>
+                                </div>
+                            </div>
+                            <span class="num-val critical_color">- Rp. 10.000</span>
+                        </a>
+                        <a class="tf-trading-history" href="61_filter-research.html">
+                            <div class="inner-left">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-coins"></i>
+                                </div>
+                                <div class="content">
+                                    <h4>Iuran Kegiatan Pramuka</h4>
+                                    <p>02/10/24 10:27 AM</p>
+                                </div>
+                            </div>
+                            <span class="num-val critical_color">- Rp. 15.000</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="trading-month">
+                    <h4 class="fw_5 mb-3">September</h4>
+                    <div class="group-trading-history mb-5">
+                        <a class="tf-trading-history" href="61_filter-research.html">
+                            <div class="inner-left">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-money-bill"></i>
+                                </div>
+                                <div class="content">
+                                    <h4>Bayar SPP</h4>
+                                    <p>20/11/2022 17:27 PM</p>
+                                </div>
+                            </div>
+                            <span class="num-val critical_color">- Rp. 300.000</span>
+                        </a>
+                        <a class="tf-trading-history" href="61_filter-research.html">
+                            <div class="inner-left">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-user-tie"></i>
+                                </div>
+                                <div class="content">
+                                    <h4>Pelunasan Seragam Sekolah</h4>
+                                    <p>20/11/2022 13:27 PM</p>
+                                </div>
+                            </div>
+                            <span class="num-val critical_color">- Rp. 250.000</span>
+                        </a>
+                        <a class="tf-trading-history" href="61_filter-research.html">
+                            <div class="inner-left">
+                                <div class="icon-box rgba_success">
+                                    <i class="fa-solid fa-wallet"></i>
+                                </div>
+                                <div class="content">
+                                    <h4>Top Up App Pay</h4>
+                                    <p>20/11/2022 10:27 AM</p>
+                                </div>
+                            </div>
+                            <span class="num-val success_color">+ Rp. 1.000.000</span>
+                        </a>
+                        <a class="tf-trading-history" href="61_filter-research.html">
+                            <div class="inner-left">
+                                <div class="icon-box rgba_success">
+                                    <i class="fa-solid fa-wallet"></i>
+                                </div>
+                                <div class="content">
+                                    <h4>Top Up App Pay</h4>
+                                    <p>20/11/2022 10:27 AM</p>
+                                </div>
+                            </div>
+                            <span class="num-val success_color">+ Rp. 250.000</span>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="app-section st1 mt-1 bg_white_color">
-                <div class="tf-container">
-                    <div class="tf-tab">
-                        <ul class="menu-tabs timeline mb-5">
-                            <li class="nav-tab active">The last 7 days</li>
-                            <li class="nav-tab">30 days</li>
-                            <li class="nav-tab">Custom</li>
-        
-                        </ul>
-                        <div class="wrap-chart">
-                            <ul class="case">
-                                <li>400</li>
-                                <li>200</li>
-                                <li>0</li>
-                                <li>-200</li>
-                                <li>-400</li>
-                            </ul>
-                                <div class="content-tab">
-                                    <div class="chart-item">
-                                        <img src="images/banner/chart.png" alt="">
-                                        <ul class="bottom d-flex justify-content-between">
-                                            <li>29-06</li>
-                                            <li>05-07</li>
-                                        </ul>  
-                                    </div>
-                                    <div class="chart-item">
-                                        <img src="images/banner/chart.png" alt="">
-                                        <ul class="bottom d-flex justify-content-between">
-                                            <li>29-06</li>
-                                            <li>05-07</li>
-                                        </ul>  
-                                    </div>
-                                    <div class="chart-item">
-                                        <img src="images/banner/chart.png" alt="">
-                                        <ul class="bottom d-flex justify-content-between">
-                                            <li>29-06</li>
-                                            <li>05-07</li>
-                                        </ul> 
-                                    </div>
-                                </div>
-                        </div>   
-                </div>
-                </div>
-            </div>
-            <div class="app-section st1 mt-1 mb-5 bg_white_color">
-                <div class="tf-container">
-                    <div class="trading-month">
-                        <h4 class="fw_5 mb-3">November</h4>
-                        <div class="group-trading-history mb-5">
-                            <a class="tf-trading-history" href="61_filter-research.html">
-                                <div class="inner-left">
-                                    <div class="icon-box rgba_primary">
-                                        <i class="icon icon-electricity-1"></i>
-                                    </div>
-                                    <div class="content">
-                                        <h4>Electric bill</h4>
-                                        <p>Today 10:27 AM</p>
-                                    </div>
-                                </div>
-                                <span class="num-val critical_color">- $307</span>
-                            </a>
-                            <a class="tf-trading-history" href="61_filter-research.html">
-                                <div class="inner-left">
-                                    <div class="thumb">
-                                        <img src="images/user/user2.jpg" alt="image">
-                                    </div>
-                                    <div class="content">
-                                        <h4>Esther</h4>
-                                        <p>Today 7:30 AM</p>
-                                    </div>
-                                </div>
-                                <span class="num-val success_color">+ $50</span>
-                            </a>
-                         
-                        </div>
-                </div>
-                <div class="trading-month">
-                        <h4 class="fw_5 mb-3">October</h4>
-                        <div class="group-trading-history mb-5">
-                            <a class="tf-trading-history" href="61_filter-research.html">
-                                <div class="inner-left">
-                                    <div class="icon-box">
-                                        <i class="icon icon-mobile"></i>
-                                    </div>
-                                    <div class="content">
-                                        <h4>Mobile</h4>
-                                        <p>Yesterday 17:27 PM</p>
-                                    </div>
-                                </div>
-                                <span class="num-val critical_color">- $25</span>
-                            </a>
-                            <a class="tf-trading-history" href="61_filter-research.html">
-                                <div class="inner-left">
-                                    <div class="icon-box">
-                                        <i class="icon icon-wifi"></i>
-                                    </div>
-                                    <div class="content">
-                                        <h4>Wifi</h4>
-                                        <p>Yesterday 13:27 PM</p>
-                                    </div>
-                                </div>
-                                <span class="num-val critical_color">- $32</span>
-                            </a>
-                            <a class="tf-trading-history" href="61_filter-research.html">
-                                <div class="inner-left">
-                                    <div class="icon-box">
-                                        <i class="icon icon-water2"></i>
-                                    </div>
-                                    <div class="content">
-                                        <h4>Water bill</h4>
-                                        <p>Yesterday 10:27 AM</p>
-                                    </div>
-                                </div>
-                               <span class="num-val critical_color">- $10</span>
-                            </a>
-                        </div>
-                </div>
-                <div class="trading-month">
-                        <h4 class="fw_5 mb-3">September</h4>
-                        <div class="group-trading-history mb-5">
-                            <a class="tf-trading-history" href="61_filter-research.html">
-                                <div class="inner-left">
-                                    <div class="icon-box">
-                                        <i class="icon icon-steam"></i>
-                                    </div>
-                                    <div class="content">
-                                        <h4>Steam</h4>
-                                        <p>20/11/2022 17:27 PM</p>
-                                    </div>
-                                </div>
-                                <span class="num-val critical_color">- $25</span>
-                            </a>
-                            <a class="tf-trading-history" href="61_filter-research.html">
-                                <div class="inner-left">
-                                    <div class="icon-box">
-                                        <i class="icon icon-app-store"></i>
-                                    </div>
-                                    <div class="content">
-                                        <h4>App Store</h4>
-                                        <p>20/11/2022 13:27 PM</p>
-                                    </div>
-                                </div>
-                               <span class="num-val critical_color">- $32</span>
-                            </a>
-                            <a class="tf-trading-history" href="61_filter-research.html">
-                                <div class="inner-left">
-                                    <div class="thumb">
-                                        <img src="images/user/user5.jpg" alt="image">
-                                    </div>
-                                    <div class="content">
-                                        <h4>Leslie</h4>
-                                        <p>20/11/2022 10:27 AM</p>
-                                    </div>
-                                </div>
-                                <span class="num-val success_color">+ $10</span>
-                            </a>
-                            <a class="tf-trading-history" href="61_filter-research.html">
-                                <div class="inner-left">
-                                    <div class="thumb">
-                                        <img src="images/user/user5.jpg" alt="image">
-                                    </div>
-                                    <div class="content">
-                                        <h4>Leslie</h4>
-                                        <p>20/11/2022 10:27 AM</p>
-                                    </div>
-                                </div>
-                                <span class="num-val success_color">+ $10</span>
-                            </a>
-                        </div>
-                </div>
-                </div>
-            </div>
+        </div>
     </div>
+    
     
     <div class="bottom-navigation-bar">
         <div class="tf-container">
