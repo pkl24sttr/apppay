@@ -984,6 +984,11 @@ textarea.form-textarea[rows] {
   color: #533dea;
   background-color: #ffffff;
 }
+
+.enter:hover{
+  color: #533dea;;
+}
+
 .tf-btn.secondary {
   background-color: #717171;
   border: 1px solid #717171;
