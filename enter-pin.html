@@ -59,39 +59,6 @@
 
     <script type="text/javascript" src="javascript/jquery.min.js"></script>
     <script type="text/javascript" src="javascript/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        // Fungsi untuk menampilkan konten utama setelah preload selesai
-        window.onload = function() {
-            // Sembunyikan preload dan tampilkan konten utama
-            document.querySelector('.preload-container').style.display = 'none';
-            document.querySelector('.wrap-transfer').style.display = 'block';
-        };
-
-        document.getElementById("pin-form").addEventListener("submit", function(event) {
-            event.preventDefault(); // Mencegah formulir dari pengiriman standar
-
-            // Mengambil nilai PIN yang dimasukkan
-            const pin1 = document.getElementById("pin1").value;
-            const pin2 = document.getElementById("pin2").value;
-            const pin3 = document.getElementById("pin3").value;
-            const pin4 = document.getElementById("pin4").value;
-
-            // Menggabungkan semua input PIN
-            const pin = pin1 + pin2 + pin3 + pin4;
-
-            // PIN yang benar, Anda bisa menggantinya sesuai dengan PIN yang Anda inginkan
-            const correctPin = "3624";
-
-            // Periksa apakah PIN sesuai
-            if (pin === correctPin) {
-                // Arahkan ke halaman sukses
-                window.location.href = "topup-berhasil.html";
-            } else {
-                // Arahkan ke halaman gagal
-                window.location.href = "topup-gagal.html";
-            }
-        });
-    </script>
 </body>
 
 </html>
