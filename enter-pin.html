@@ -15,50 +15,57 @@
     <!-- Icons -->
     <link rel="stylesheet" href="fonts/icons-alipay.css">
     <link rel="stylesheet" href="styles/bootstrap.css">
+
     <link rel="stylesheet" type="text/css" href="styles/styles.css" />
     <link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
     <link rel="apple-touch-icon" sizes="192x192" href="app/icons/icon-192x192.png">
 </head>
 
 <body>
-    <!-- preloade -->
-    <div class="preload preload-container">
+       <!-- preloade -->
+       <div class="preload preload-container">
         <div class="preload-logo">
-            <div class="spinner"></div>
+          <div class="spinner"></div>
         </div>
-    </div>
+      </div>
     <!-- /preload -->
     <div class="header">
         <div class="tf-container">
             <div class="tf-statusbar d-flex justify-content-center align-items-center">
-                <a href="topup.html" class="back-btn"><i class="icon-left"></i> </a>
-                <h3>Masukkan PIN Anda</h3>
+                <a href="topup.html" class="back-btn"> <i class="icon-left"></i> </a>
+                <h3>Enter your PIN</h3>
             </div>
             <div class="tf-spacing-20"></div>
         </div>
     </div>
     
-    <div class="wrap-transfer" style="display: none;">
-        <form class="tf-form-verify" id="pin-form">
-            <div class="d-flex group-input-verify">
-                <input type="tel" maxlength="1" pattern="[0-9]" class="input-verify" value="3" id="pin1">
-                <input type="tel" maxlength="1" pattern="[0-9]" class="input-verify" value="6" id="pin2">
-                <input type="tel" maxlength="1" pattern="[0-9]" class="input-verify" value="2" id="pin3">
-                <input type="tel" maxlength="1" pattern="[0-9]" class="input-verify" value="" id="pin4">
-            </div>
-            <div class="text-send-code">
-                <p class="fw_4">Masukkan PIN Anda untuk melanjutkan</p>
-            </div>
-            <div class="bottom-navigation-bar">
-                <div class="tf-container">
-                    <button type="button" class="tf-btn accent"><a href="va.html">Selanjutnya</a></button>
+    <div class="wrap-transfer">
+            <form class="tf-form-verify" action="va.html">
+                    <div class="d-flex group-input-verify">
+                        <input type="tel" maxlength="1" pattern="[0-9]" class="input-verify" value="3">
+                        <input type="tel" maxlength="1" pattern="[0-9]" class="input-verify" value="6">
+                        <input type="tel" maxlength="1" pattern="[0-9]" class="input-verify" value="2">
+                        <input type="tel" maxlength="1" pattern="[0-9]" class="input-verify" value="">
+                    </div>
+                    <div class="text-send-code">
+                        <p class="fw_4">Enter  your PIN to proceed</p>
+                    </div>
+                <div class="bottom-navigation-bar">
+                    <div class="tf-container">
+                        <button type="submit" class="tf-btn accent">Selanjutnya</button>
+                    </div>
                 </div>
-            </div>
-        </form>
+            </form>
+
     </div>
+
 
     <script type="text/javascript" src="javascript/jquery.min.js"></script>
     <script type="text/javascript" src="javascript/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascript/count-down.js"></script>
+    <script type="text/javascript" src="javascript/verify-input.js"></script>
+    <script type="text/javascript" src="javascript/main.js"></script>
+
 </body>
 
 </html>
