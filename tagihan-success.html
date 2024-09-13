@@ -1,117 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover">
-    <title>Transaksi Berhasil</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Specific Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover"
+    />
+    <title>Pembayaran Tagihan Sukses</title>
+    <!-- Favicon and Touch Icons  -->
     <link rel="shortcut icon" href="images/logo.png" />
+    <link rel="apple-touch-icon-precomposed" href="images/logo.png" />
+    <!-- Font -->
     <link rel="stylesheet" href="fonts/fonts.css" />
-    <link rel="stylesheet" href="fonts/icons-alipay.css">
-    <link rel="stylesheet" href="styles/bootstrap.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="fonts/icons-alipay.css" />
+    <link rel="stylesheet" href="styles/bootstrap.css" />
+
     <link rel="stylesheet" type="text/css" href="styles/styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <style>
-        .receipt {
-            font-size: 20px;
-        }
+    <link
+      rel="manifest"
+      href="_manifest.json"
+      data-pwa-version="set_in_manifest_and_pwa_js"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="192x192"
+      href="app/icons/icon-192x192.png"
+    />
+  </head>
 
-        .receipt p {
-            display: flex;
-            justify-content: space-between;
-            font-size: 20px;
-        }
-
-        .icon-btn {
-            background: none;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            margin-right: 15px;
-        }
-
-        .icon-btn i {
-            margin-left: 5px;
-        }
-
-        .icon-container {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .action-btn {
-            background-color: #533dea;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            margin-right: 10px;
-            font-size: 18px;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-        }
-
-        .action-btn i {
-            margin-left: 10px;
-        }
-
-        .wrap-receipt {
-            margin: 20px;
-        }
-
-        .bottom-navigation-bar {
-            display: none;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="header">
-        <div class="tf-container">
-            <div class="tf-statusbar d-flex justify-content-center align-items-center">
-                <h1 >Transaksi Berhasil</h1>
-            </div>
-            <div class="tf-spacing-20"></div>
+  <body class="bg_surface_color">
+    <!-- preloade -->
+    <div class="preload preload-container">
+      <div class="preload-logo">
+        <div class="spinner"></div>
+      </div>
+    </div>
+    <!-- /preload -->
+    <div class="header is-fixed">
+      <div class="tf-container">
+        <div
+          class="tf-statusbar d-flex justify-content-center align-items-center"
+        >
+          <a href="#" class="back-btn"> <i class="icon-left"></i> </a>
+          <h3>Tagihan</h3>
         </div>
+      </div>
+    </div>
+    <div id="app-wrap">
+      <div class="bill-payment-content">
+        <div class="tf-container">
+          <div class="wrapper-bill">
+            <div class="archive-top">
+              <span class="circle-box lg bg-circle check-icon"> </span>
+              <h1><a href="#" class="success_color">Rp. 500.000</a></h1>
+              <h3 class="mt-2 fw_6">Pembayaran Tagihan Berhasil</h3>
+              <p class="fw_4 mt-2">
+                2024-09-05 18:55:30
+              </p>
+            </div>
+            <div class="dashed-line"></div>
+            <div class="archive-bottom">
+              <h2 class="text-center">Customer Information</h2>
+              <ul>
+                <li class="list-info-bill">
+                  Customer's Code <span>PD123456789</span>
+                </li>
+                <li class="list-info-bill">
+                  Customer Name <span>Themesflat</span>
+                </li>
+                <li class="list-info-bill">
+                  Address
+                  <span class="text-end"
+                    >themesflat@gmail.<br />
+                    com</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="wrap-receipt">
-        <div class="card">
-            <div class="card-header">
-                <h2>Struk Pembayaran</h2>
-            </div>
-            <div class="card-body">
-                <div class="receipt">
-                    <p class="mb-3"><span>ID Transaksi:</span> <span>123456789</span></p>
-                    <p class="mb-3"><span>Waktu:</span> <span>07/08/2024, 12:34 PM</span></p>
-                    <p class="mb-3"><span>Nama Siswa:</span> <span>KEVIN</span></p>
-                    <p class="mb-3"><span>Pembayaran:</span> <span>SERAGAM</span></p>
-                    <p class="mb-3"><span>Jumlah:</span> <span>Rp. 500.000</span></p>
-                    <p class="mb-3"><span>Status:</span> <span style="color: green;">Sukses</span></p>
-                </div>
-            </div>
-            <div class="card-footer text-center">
-                <div class="icon-container">
-                    <button type="button" class="action-btn d-flex justify-content-center align-items-center" onclick="shareReceipt()">
-                        <span>Bagikan</span>
-                        <i class="fas fa-share ms-2"></i>
-                    </button>
-                    <button type="button" class="action-btn d-flex justify-content-center align-items-center" onclick="downloadReceipt()">
-                        <span>Download</span>
-                        <i class="fa-solid fa-download ms-2"></i>
-                    </button>
-                </div>                
-                <div class="tf-spacing-20"></div>
-                <button type="button" class="tf-btn accent" onclick="window.location.href='home.html'">Kembali ke Beranda</button>
-            </div>
-        </div>
+    <div class="bottom-navigation-bar st1 bottom-btn-fixed">
+      <div class="tf-container">
+        <a href="home.html" class="tf-btn accent large">Done</a>
+      </div>
     </div>
 
     <script type="text/javascript" src="javascript/jquery.min.js"></script>
     <script type="text/javascript" src="javascript/bootstrap.min.js"></script>
-</body>
-
+    <script type="text/javascript" src="javascript/count-down.js"></script>
+    <script type="text/javascript" src="javascript/main.js"></script>
+  </body>
 </html>
