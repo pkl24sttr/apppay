@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover">
+    <title>QR code</title>
+    <!-- Favicon and Touch Icons  -->
+    <link rel="shortcut icon" href="images/logo.png" />
+    <link rel="apple-touch-icon-precomposed" href="images/logo.png" />
+    <!-- Font -->
+    <link rel="stylesheet" href="fonts/fonts.css" />
+    <!-- Icons -->
+    <link rel="stylesheet" href="fonts/icons-alipay.css">
+    <link rel="stylesheet" href="styles/bootstrap.css">
+
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
+    <link rel="apple-touch-icon" sizes="192x192" href="app/icons/icon-192x192.png">
+</head>
+
+<body>
+  <!-- preloade -->
+  <div class="preload preload-container">
+    <div class="preload-logo">
+      <div class="spinner"></div>
+    </div>
+  </div>
+<!-- /preload -->
+    <!-- Header -->
+  <div class="header">
+    <div class="tf-container">
+      <div class="tf-statusbar d-flex justify-content-center align-items-center">
+        <a href="#" class="back-btn"> <i class="icon-left"></i> </a>
+        <h3>Absensi QR Code</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scan Section -->
+  <div class="wrap-scan-camera">
+    <div class="tf-container">
+      <div class="scan-instructions text-center">
+        <h4>Silakan Arahkan Kamera ke QR Code untuk Absensi</h4>
+        <p>Pastikan QR Code terlihat jelas di layar.</p>
+      </div>
+      <div class="qr-camera-frame">
+        <div class="camera-overlay">
+          <img src="images/camera-frame.png" alt="QR Camera Frame" class="camera-frame">
+        </div>
+        <video id="qr-video" autoplay></video>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Notification -->
+  <div class="tf-panel scan">
+    <div class="panel_overlay"></div>
+    <div class="panel-box panel-up wrap-scan-qr">
+      <div class="box-scan-notification text-center">
+        <i class="icon-noti"></i>
+        <p>Memindai QR Code, harap tunggu...</p>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="javascript/jquery.min.js"></script>
+  <script type="text/javascript" src="javascript/bootstrap.min.js"></script>
+  <script type="text/javascript" src="javascript/main.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/html5-qrcode/minified/html5-qrcode.min.js"></script>
+  <script type="text/javascript">
+    // Load the QR scanner
+    const videoElement = document.getElementById('qr-video');
+
+    function startQRScanner() {
+      navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } })
+        .then(function(stream) {
+          videoElement.srcObject = stream;
+        })
+        .catch(function(err) {
+          console.log('Error accessing camera: ' + err);
+        });
+    }
+
+    $(document).ready(function () {
+      startQRScanner();
+
+      // Simulate QR scan success
+      window.setTimeout(function () {
+        location.href = "absensi-berhasil.html";
+      }, 5000);
+    });
+  </script>
+</body>
+
+</html>
