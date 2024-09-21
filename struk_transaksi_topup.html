@@ -29,6 +29,19 @@
       sizes="192x192"
       href="app/icons/icon-192x192.png"
     />
+    <style>
+      /* Default behavior for larger screens (like laptop) */
+      .bottom-navigation-bar .tf-btn {
+        margin-bottom: 0;
+      }
+  
+      /* Media query for screens smaller than 992px (Bootstrap's "lg" breakpoint) */
+      @media (max-width: 991px) {
+        .bottom-navigation-bar .col-lg-6 {
+          margin-bottom: 20px; /* Add spacing between buttons */
+        }
+      }
+    </style>
   </head>
 
   <body class="bg_surface_color">
