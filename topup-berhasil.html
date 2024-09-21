@@ -29,6 +29,19 @@
       sizes="192x192"
       href="app/icons/icon-192x192.png"
     />
+    <style>
+      /* Default behavior for larger screens (like laptop) */
+      .bottom-navigation-bar .tf-btn {
+        margin-bottom: 0;
+      }
+
+      /* Media query for screens smaller than 992px (Bootstrap's "lg" breakpoint) */
+      @media (max-width: 991px) {
+        .bottom-navigation-bar .col-lg-6 {
+          margin-bottom: 20px; /* Add spacing between buttons */
+        }
+      }
+    </style>
   </head>
 
   <body class="bg_surface_color">
@@ -63,20 +76,13 @@
             </div>
             <div class="dashed-line"></div>
             <div class="archive-bottom">
-              <h2 class="text-center">Customer Information</h2>
+              <h2 class="text-center">Keterangan</h2>
               <ul>
                 <li class="list-info-bill">
-                  Customer's Code <span>PD123456789</span>
+                  No Transaksi <span>PD123456789</span>
                 </li>
                 <li class="list-info-bill">
-                  Customer Name <span>Themesflat</span>
-                </li>
-                <li class="list-info-bill">
-                  Address
-                  <span class="text-end"
-                    >themesflat@gmail.<br />
-                    com</span
-                  >
+                  Nama <span>Kevin Alexander</span>
                 </li>
               </ul>
             </div>
