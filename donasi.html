@@ -28,6 +28,12 @@
       sizes="192x192"
       href="app/icons/icon-192x192.png"
     />
+    <style>
+      .tag-money.active {
+        background-color: #533dea !important;
+        color: white;
+      }
+    </style>
   </head>
 
   <body>
@@ -89,6 +95,22 @@
         </ul>
       </div>
     </div>
+
+    <script>
+      document.querySelectorAll('.tag-money').forEach(function(item) {
+        item.addEventListener('click', function(e) {
+          e.preventDefault();
+    
+          // Remove active class from all items
+          document.querySelectorAll('.tag-money').forEach(function(link) {
+            link.classList.remove('active');
+          });
+    
+          // Add active class to the clicked item
+          item.classList.add('active');
+        });
+      });
+    </script>
 
     <div class="tf-panel up">
       <div class="panel_overlay"></div>
