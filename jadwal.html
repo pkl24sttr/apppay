@@ -113,43 +113,304 @@
                   height: 200px;
                   background-image: url('images/img/jadwal-bg.jpeg');
                   background-size: cover;
-                  background-position: center;
-                  background-repeat: no-repeat;
-                  width: 100%;
                 "
               ></div>
             </div>
           </div>
-          <div
-            class="bill-topbar d-flex justify-content-center align-items-center mt-3"
-            style="background-image: url('images/img/hari-bg.jpeg')"
-          >
-            <h4 class="fw_6">Senin</h4>
-          </div>
-          <div class="wrapper-bill">
-            <div class="archive-top">
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th>Waktu</th>
-                    <th>Mata Pelajaran</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>07.00-09.00</td>
-                    <td>Matematika</td>
-                  </tr>
-                  <tr>
-                    <td>09.00-11.00</td>
-                    <td>IPA</td>
-                  </tr>
-                  <tr>
-                    <td>11.00-13.00</td>
-                    <td>Seni Budaya</td>
-                  </tr>
-                </tbody>
-              </table>
+          <div class="container mt-5">
+            <!-- Card Besar -->
+            <div
+              class="card"
+              style="
+                border-radius: 20px;
+                background-color: #e3f2fd;
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+              "
+            >
+              <div
+                class="card-header text-center"
+                style="
+                  background-color: #42a5f5;
+                  color: white;
+                  font-size: 2rem;
+                  padding: 20px;
+                "
+              >
+                Jadwal Pelajaran Mingguan
+              </div>
+              <div class="card-body">
+                <!-- Row Pertama: Senin, Selasa, Rabu -->
+                <div class="row mb-4">
+                  <div class="col-md-4">
+                    <!-- Card Senin -->
+                    <div
+                      class="card mb-4"
+                      style="border-radius: 15px; background-color: #f1f8ff"
+                    >
+                      <div
+                        class="card-header text-center"
+                        style="
+                          background-color: #4caf50;
+                          color: white;
+                          font-size: 1.5rem;
+                        "
+                      >
+                        Senin
+                      </div>
+                      <div class="card-body">
+                        <table
+                          class="table table-bordered table-striped text-center"
+                        >
+                          <thead class="table-primary">
+                            <tr>
+                              <th>Waktu</th>
+                              <th>Mata Pelajaran</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>07.00-09.00</td>
+                              <td>Matematika</td>
+                            </tr>
+                            <tr>
+                              <td>09.00-11.00</td>
+                              <td>IPA</td>
+                            </tr>
+                            <tr>
+                              <td>11.00-13.00</td>
+                              <td>Seni Budaya</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <!-- Card Selasa -->
+                    <div
+                      class="card mb-4"
+                      style="border-radius: 15px; background-color: #f1f8ff"
+                    >
+                      <div
+                        class="card-header text-center"
+                        style="
+                          background-color: #f57f17;
+                          color: white;
+                          font-size: 1.5rem;
+                        "
+                      >
+                        Selasa
+                      </div>
+                      <div class="card-body">
+                        <table
+                          class="table table-bordered table-striped text-center"
+                        >
+                          <thead class="table-primary">
+                            <tr>
+                              <th>Waktu</th>
+                              <th>Mata Pelajaran</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>07.00-09.00</td>
+                              <td>Bahasa Indonesia</td>
+                            </tr>
+                            <tr>
+                              <td>09.00-11.00</td>
+                              <td>IPA</td>
+                            </tr>
+                            <tr>
+                              <td>11.00-13.00</td>
+                              <td>Penjaskes</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <!-- Card Rabu -->
+                    <div
+                      class="card mb-4"
+                      style="border-radius: 15px; background-color: #f1f8ff"
+                    >
+                      <div
+                        class="card-header text-center"
+                        style="
+                          background-color: #29b6f6;
+                          color: white;
+                          font-size: 1.5rem;
+                        "
+                      >
+                        Rabu
+                      </div>
+                      <div class="card-body">
+                        <table
+                          class="table table-bordered table-striped text-center"
+                        >
+                          <thead class="table-primary">
+                            <tr>
+                              <th>Waktu</th>
+                              <th>Mata Pelajaran</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>07.00-09.00</td>
+                              <td>Matematika</td>
+                            </tr>
+                            <tr>
+                              <td>09.00-11.00</td>
+                              <td>IPS</td>
+                            </tr>
+                            <tr>
+                              <td>11.00-13.00</td>
+                              <td>Bahasa Inggris</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Row Kedua: Kamis, Jumat -->
+                <div class="row mb-4">
+                  <div class="col-md-4">
+                    <!-- Card Kamis -->
+                    <div
+                      class="card mb-4"
+                      style="border-radius: 15px; background-color: #f1f8ff"
+                    >
+                      <div
+                        class="card-header text-center"
+                        style="
+                          background-color: #8e24aa;
+                          color: white;
+                          font-size: 1.5rem;
+                        "
+                      >
+                        Kamis
+                      </div>
+                      <div class="card-body">
+                        <table
+                          class="table table-bordered table-striped text-center"
+                        >
+                          <thead class="table-primary">
+                            <tr>
+                              <th>Waktu</th>
+                              <th>Mata Pelajaran</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>07.00-09.00</td>
+                              <td>PPKN</td>
+                            </tr>
+                            <tr>
+                              <td>09.00-11.00</td>
+                              <td>Bahasa Indonesia</td>
+                            </tr>
+                            <tr>
+                              <td>11.00-13.00</td>
+                              <td>Penjaskes</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <!-- Card Jumat -->
+                    <div
+                      class="card mb-4"
+                      style="border-radius: 15px; background-color: #f1f8ff"
+                    >
+                      <div
+                        class="card-header text-center"
+                        style="
+                          background-color: #e53935;
+                          color: white;
+                          font-size: 1.5rem;
+                        "
+                      >
+                        Jumat
+                      </div>
+                      <div class="card-body">
+                        <table
+                          class="table table-bordered table-striped text-center"
+                        >
+                          <thead class="table-primary">
+                            <tr>
+                              <th>Waktu</th>
+                              <th>Mata Pelajaran</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>07.00-09.00</td>
+                              <td>Matematika</td>
+                            </tr>
+                            <tr>
+                              <td>09.00-10.30</td>
+                              <td>IPA</td>
+                            </tr>
+                            <tr>
+                              <td>10.30-12.00</td>
+                              <td>Seni Budaya</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <!-- Card Sabtu -->
+                    <div
+                      class="card mb-4"
+                      style="border-radius: 15px; background-color: #f1f8ff"
+                    >
+                      <div
+                        class="card-header text-center"
+                        style="
+                          background-color: #43a047;
+                          color: white;
+                          font-size: 1.5rem;
+                        "
+                      >
+                        Sabtu
+                      </div>
+                      <div class="card-body">
+                        <table
+                          class="table table-bordered table-striped text-center"
+                        >
+                          <thead class="table-primary">
+                            <tr>
+                              <th>Waktu</th>
+                              <th>Mata Pelajaran</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>07.00-09.00</td>
+                              <td>Olahraga</td>
+                            </tr>
+                            <tr>
+                              <td>09.00-11.00</td>
+                              <td>Kesenian</td>
+                            </tr>
+                            <tr>
+                              <td>11.00-12.30</td>
+                              <td>Prakarya</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
