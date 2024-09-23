@@ -64,7 +64,7 @@
 
         .calendar-day {
             background-color: white;
-            height: 80px; /* Adjusted height to fit more dates */
+            height: 50px; /* Reduced height */
             position: relative;
             padding: 2px; /* Reduced padding */
             display: flex;
@@ -74,21 +74,25 @@
         }
 
         .calendar-day .date {
-            font-size: 10px; /* Further reduced font size */
+            font-size: 18px; /* Increased font size for date */
             color: #202124;
             font-weight: 500;
+            margin-bottom: 2px; /* Spacing between date and badge */
         }
 
-        .calendar-day .event {
-            background-color: #e8f0fe;
-            color: #1a73e8;
+        .calendar-day .event-badge {
             border-radius: 50%;
-            padding: 2px 4px; /* Adjusted padding */
-            font-size: 10px;
-            margin-top: 2px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
+            width: 8px;
+            height: 8px;
+            margin-top: 2px; /* Space above badge */
+        }
+
+        .calendar-day .event-libur {
+            background-color: #ff8a80; /* Libur */
+        }
+
+        .calendar-day .event-guru {
+            background-color: #dce775; /* Hari Guru */
         }
 
         .calendar-day.today {
@@ -135,29 +139,17 @@
         }
 
         .event-libur {
-            background-color: #ff8a80;
-        }
-
-        .event-ujian {
-            background-color: #82b1ff;
-        }
-
-        .event-upacara {
-            background-color: #a7ffeb;
-        }
-
-        .event-latihan {
-            background-color: #ffd54f;
+            background-color: #ff8a80; /* Libur Nasional */
         }
 
         .event-guru {
-            background-color: #dce775;
+            background-color: #dce775; /* Hari Guru */
         }
     </style>
 </head>
 
 <body>
-    
+
     <div class="calendar-container">
         <!-- Header Kalender -->
         <div class="calendar-header">
